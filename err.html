@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Progress</title>
+</head>
+<body>
+    <div>
+        <img style="display:block;" id="gif" src="home-img/in-progress.gif" alt="wait">
+        <iframe id="neverGiveUp" style="border-radius: 10px; display: none;" width="560" height="315" src="https://www.youtube.com/embed/tYzMYcUty6s? autoplay=1 mute=1 loop=1 controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h1>WEBSITE IN PROGRESS</h1>
+        <p>More content will be added soon. Hold on and watch this video.</p>
+        <div class="space">
+            <a href="#" onclick="playVid()">Watch this sh*t</a>
+            <p>or</p>
+            <a href="index.html">Return to Homepage</a>
+        </div>
+    </div>
+</body>
+<script>
+    function playVid(){
+        var x = document.getElementById("neverGiveUp");
+        var y = document.getElementById("gif");
+        if(x.style.display == "none"){
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none"
+            y.style.display = "block";
+        }
+    }  
+</script>
+
+<style>
+    @font-face {
+        font-family: graduate;
+        src: url(font/Graduate-Regular.ttf);
+    }
+    body{
+        height: 100vh;
+        font-family: graduate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0%;
+    }
+    div{
+        text-align: center;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        height: 40vh;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .space{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    p{
+        margin: 0px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        padding: .5rem;
+        background-color: rgb(221, 221, 221);
+        border-radius: 15px;
+    }
+    a:hover{
+        transform: scale(105%);
+        background-color: rgb(206, 206, 206);
+        transition-duration: 400ms;
+    }
+    @media only screen and (min-height:500px) {
+        .space{
+            flex-direction: column;
+        }
+    }
+</style>
+</html>

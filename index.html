@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grub n' GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="home-img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="jvascpt.js"></script>
+</head>
+
+<script>
+function respond() {
+    var x = document.getElementById("extMenu");
+    if(x.style.display == "none"){
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+} 
+
+var cartValue = 0;
+function addItemCart() {
+    var cartitemAdd = document.getElementById("cart");
+    cartValue++;
+    cartitemAdd.innerHTML = cartValue + " items";
+}
+
+</script>
+
+<body class="body">
+        <div class="cart fontFam center" onclick="parent.location='err.html'">
+            <img src="home-img/cart.png" alt="cart">
+            <p id="cart">0 item</p>
+        </div>
+
+    <!-- Navigation Bar -->
+    <div id="nav" class="navBar" style="background-color: rgb(255, 255, 255);">
+        <div class="logo" title="Logo">
+            <a href="err.html"><img src="home-img/logo.png" alt="logo"></a>
+            <a href="err.html"><h1>Grub n'GO</h1></a>
+        </div>
+        <div class="options">
+            <ul>
+                <li><a href="testing.html">Products</a></li>
+                <li><a href="err.html">Delivery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="vl"></div>
+            <a class="btnProfile center" href="err.html"><img class="profile center" src="profiles/default-profile.jpg" alt="cart" title="User Profile"></a>
+            <button class="button menu" onclick="respond();" title="Menu"></button>
+        </div>
+    </div>
+
+    <!-- Container for the rest of the website -->
+    <div class="contain">
+        <div class="spacer"></div>
+
+        <!-- Extended Menu for Mobile -->
+        <div id="extMenu" class="altExt fontFam"  style="display:none;">
+            <div class="extContain">
+                <div class="extProfile">
+                    <img src="profiles/default-profile.jpg" alt="profile">
+                    <p>UserName123</p>
+                </div>
+                <ul class="extMenuOptions">
+                    <li><a href="testing.html">Products</a></li>
+                    <li><a href="err.html">Delivery</a></li>
+                    <li><a href="err.html">About</a></li>
+                    <li><a href="err.html">Contact</a></li>
+                </ul>
+
+                <a class="closeDock" href="#" onclick="respond()"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-bar-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z"/> </svg> </a>
+            </div>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="sections hero fontFam">
+            <div class="txt0">
+                <h1>Delicious selections,</h1>
+                <h1>Delivered to you!</h1>
+            </div>
+
+            <div class="buttonShape"  onclick="parent.location='#orderNow'">
+                <a class="" href="#orderNow">Order Now</a>
+                <img src="home-img/vectorArrowRight.png" alt="vectArrow">
+            </div>
+
+            <div class="txt0">
+                <h5 class="heroText">Treat Yourself TODAY!</h5>
+            </div>
+            <div class="arrowDown center">
+                <img class="arr" src="home-img/gif-bounce-arrow.gif" alt="e">
+                <img class="arr" src="home-img/gif-bounce-arrow.gif" alt="e">
+            </div>
+            
+        </div>
+
+        <!-- Product Highlights -->
+        <div id="orderNow" class="sections productSection fontFam">
+            <h3>Products</h1>
+            <h1>Popular Now</h1>
+            <div class="productCategories">
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/1.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>89.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Milktea</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/2.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/3.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/4.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>99.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/jolibee-y1.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/jolibee-y1.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard center seeMore" onclick="parent.location='err.html'">
+                    See More >>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Recommended Products -->
+            <h1>For You</h1>
+            <div class="productCategories">
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/1.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>89.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Milktea</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/2.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/3.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/4.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>99.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/jolibee-y1.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard" onclick="addItemCart()" style="background-image: url(products/jolibee-y1.jpg)">
+                    <div class="cardContain">
+                        <div class="priceTag center">
+                            <h4>120.00</h4>
+                        </div>
+                        <div class="productName center">
+                            <h3>Product</h3>
+                        </div>
+                        <div class="toCart">
+                            <h3>Add to Cart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productCard center seeMore" onclick="parent.location='err.html'">
+                    See More >>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+
+        <!-- About Us -->
+        <div id="about" class="sections center aboutUsSection fontFam">
+            <div>
+                <h1>About Us</h1>
+                <p><b>Welcome to Grub n' Go</b> , your go-to takeaway / delivery website. We are dedicated to providing excellent experience and service into every aspect of our company. Whether you're shopping online or in-store, we strive to provide the best possible experience for our customers, and we are constantly innovating to meet their needs. Thank you for visiting Grub n' Go, and we look forward to serving you.</p>    
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="center services fontFam">
+            <h1>Why Us?</h1>
+            <div class="center servicesContainer">
+                <div class="myCard center">
+                    <h1 style="font-size: 1.5rem;">Fast Delivery</h1>
+                    <p style="font-size: 0.8rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, quaerat! Ratione voluptatem impedit minima libero ducimus voluptatum iste aut nisi soluta magni, provident natus? Ea facere dolore tenetur deleniti vero?</p>
+                </div>
+                <div class="myCard center">
+                    <h1 style="font-size: 1.5rem;">Wide Variety</h1>
+                    <p style="font-size: 0.8rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, quaerat! Ratione voluptatem impedit minima libero ducimus voluptatum iste aut nisi soluta magni, provident natus? Ea facere dolore tenetur deleniti vero?</p>
+                </div>
+                <div class="myCard center">
+                    <h1 style="font-size: 1.5rem;">Special Deals</h1>
+                    <p style="font-size: 0.8rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, quaerat! Ratione voluptatem impedit minima libero ducimus voluptatum iste aut nisi soluta magni, provident natus? Ea facere dolore tenetur deleniti vero?</p>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonials / Reviews -->
+        <div class="testimonialSection center fontFam">
+            <h1>Customer Reviews</h1>
+            <div class="row center">
+                <div class="col-12 col-sm-4 reviewCard center">
+                    <img class="bnw" src="profiles/default-profile.jpg" alt="reviewer">
+                    <p><b>Aiden Cooper</b> <br> "I decided to try Grub n' Go for the first time, and I'm so glad I did! The sushi was fresh and flavorful, and the delivery was quick and efficient."</p>
+                </div>
+    
+                <div class="col-12 col-sm-4 reviewCard center">
+                    <img class="bnw" src="profiles/default-profile.jpg" alt="reviewer">
+                    <p><b>Isabella Nguyen</b> <br> "I've ordered from Grub n' Go multiple times, and they never disappoint. The delivery is always on time, and the food is always hot and delicious."</p>
+                </div>
+    
+                <div class="col-12 col-sm-4 reviewCard center">
+                    <img class="bnw" src="profiles/default-profile.jpg" alt="reviewer">
+                    <p><b>Marcus Patel</b> <br> "I ordered from Grub n' Go last night, and the food was amazing! The chicken was juicy and flavorful, and the fries were perfectly crispy."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div id="contact" class="sections center contactSection fontFam">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <h2>If you have any concerns or suggestions, please contact us at:</h2>
+                <div class="contactInfo center">
+                    <p>
+                        Email: someone.something@gmail.com <br>
+                        Phone Numbers: <br>
+                        Globe: 09293241428 <br>
+                        Smart: 09369420694
+                    </p>
+                    <div class="vl2"></div>
+                    <p>
+                        Email: someone.something@gmail.com <br>
+                        Phone Numbers: <br>
+                        Globe: 09293241428 <br>
+                        Smart: 09369420694
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="center footerSection fontFam">
+            <div class="footerContents">
+                <ul class="footerOptions uno">
+                    <li><a href="testing.html">Products</a></li>
+                    <li><a href="err.html">Delivery</a></li>
+                    <li><a href="err.html">About</a></li>
+                    <li><a href="err.html">Contact</a></li>
+                </ul>
+
+                <div class="vl"></div>
+
+                <p class="tres">
+                    Email: someone.something@gmail.com <br>
+                    Phone Numbers: <br>
+                    Globe: 09293241428 <br>
+                    Smart: 09369420694
+                </p>
+            </div>
+            <p style="font-size: 1em;">All Rights Reserved 2023</p>
+        </div>
+        
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+</body>
+</html>

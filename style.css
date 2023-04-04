@@ -1,0 +1,596 @@
+@font-face {
+    font-family: graduate;
+    src: url(font/Graduate-Regular.ttf);
+}
+
+
+
+.b{
+    border: 1px solid red;
+}
+.e *{
+    border: 1px solid rgb(50, 47, 255);
+}
+html{
+    height: fit-content;
+}
+.body{
+    margin: 0px;
+    padding: 0px;
+    height: fit-content;
+    font-size: 16px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spacer{
+    height: 10vh;
+}
+.bnw {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+}
+.arrowDown{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    justify-content: space-between;
+}
+.arrowDown .arr{
+    height: 100px;
+}
+
+
+
+
+/* Cart */
+.cart{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: fit-content;
+    background-color: #FF5B5B;
+    border-radius: 20px 0 0 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.cart p{
+    font-size: 1.5rem;
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+.cart img{
+    height:50px;
+}
+
+
+/* Navigation Bar */
+.navBar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 10vh;
+    font-family: graduate;
+    z-index: 1;
+    background-color: whitesmoke;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 2.5rem;
+}
+.logo h1{
+    font-size: 2rem;
+    padding: 0%;
+    margin: 0%;
+}
+.options{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.options ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    padding: 0%;
+    margin: 0px;
+}
+.navBar a{
+    text-decoration: none;
+    color: black;
+}
+.options a{
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 100px;
+}
+.options a:hover{
+    background-color: #dadada;
+    transition: all 250ms ease-in-out;
+}
+.vl {
+    border-left: 1px solid rgb(0, 0, 0);
+    height: 40px;
+}
+.vl2 {
+    border-left: 2px solid rgb(0, 0, 0);
+    height: 100px;
+    margin: 30px;
+    display: block;
+}
+.btnProfile{
+    height: 6vh;
+    padding: 0%!important;
+    border: 1px solid black;
+}
+.profile{
+    height: 100%;
+    border-radius: 100px;
+  }
+.menu{
+    height: 50px;
+    display: none;
+}
+.options .button{
+    height: 50px;
+    width: 50px;
+    background-image: url(home-img/menu.png);
+    background-size: contain;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.button:hover{
+    background-color: lightgrey;
+}
+
+/* Extend Menu Alt */
+.altExt{
+    position: fixed;
+    height: fit-content;
+    width: 100%;
+    top: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.extContain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+}
+.extProfile{
+    gap: 10px;
+    height: 4vh;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.extProfile img{
+    width: 2rem;
+    border: 1px solid black;
+    border-radius: 40px;
+}
+.extProfile p{
+    font-size: 0.8rem;
+    margin: 0px;
+}
+.extMenuOptions{
+    
+    width: fit-content;
+    margin: 0px;
+    margin-top: 2vh;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+.extMenuOptions a{
+    text-decoration: none;
+    color: black;
+}
+.extMenuOptions a:hover{
+    text-decoration: underline;
+}
+.closeDock svg{
+    fill: black;
+}
+@media only screen and (max-width: 720px){
+    .options ul{
+        display: none;
+    }
+    .vl, .btnProfile{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .contain{
+        width: 100%;
+    }
+    .cart img{
+        height:30px;
+    }
+    .vl2{
+        display: none;
+    }
+    .arrowDown{
+        bottom: 20%;
+    }
+}
+
+
+
+.contain{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sections{
+    height: 50vh;
+    text-align: center;
+}
+.fontFam{
+    font-family: graduate;
+}
+.myButton{
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    padding: 1vh;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+/* Hero */
+.hero{
+    height: 90vh;
+    background: url(home-img/bgHero.jpg);
+    background-position: 100% center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+}
+.hero div{
+    padding: 10px;
+}
+.txt0{
+    width: fit-content;
+    text-align: left;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+.txt0 h1{
+    font-size: 4rem;
+}
+.txt0 h5{
+    font-size: 2rem;
+}
+.hero .myButton{
+    font-size: 2rem;
+}
+.hero .buttonShape{
+    width: 40%;
+    height: fit-content;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #FF5B5B;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+}
+.buttonShape a{
+    width:100%;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+}
+.buttonShape img{
+    height: 1.5rem;
+    padding-left: 20px;
+}
+.buttonShape:hover{
+    width: 41%;
+    transition: 500ms;
+}
+
+/* Services */
+.services{
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.servicesContainer{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+}
+.myCard{
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    padding: 1%;
+    margin: 0;
+    color: black;
+}
+.myCard h1, p{
+    font-size: 2rem;
+}
+.myCard p{
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 720px){
+    .hero{
+        height: 70vh;
+    }
+    .txt0{
+        width: 100%;
+        margin-left: 0%;
+        text-align: center;
+    }
+    .txt0 h1{
+        font-size: 2.5rem;
+    }
+    .txt1 h5{
+        font-size: 1.5rem;
+    }
+    .hero .myButton{
+        font-size: 1.5rem;
+    }
+    .cart a{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .servicesContainer{
+        flex-direction: column;
+    }
+    .services .myCard{
+        width: 95%;
+    }
+    .hero .buttonShape{
+    width: 60%;
+    }
+}
+
+/* Products Section */
+.productSection{
+    height: fit-content;
+    background-color: #e6e6e6;
+    padding: 20px;
+}
+.productSection h1{
+    margin: 0;
+    width: fit-content;
+    align-items: left;
+}
+.productSection h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+.contained{
+    height: 50vh;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+}
+.productCard{
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.cardContain:hover .toCart{
+    display: block;
+}
+.cardContain{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.priceTag{
+    position: absolute;
+    top: 8px;
+    height: 1.5rem;
+    width: fit-content;
+    background-color: rgb(0, 0, 0);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.priceTag h4{
+    color: white;
+    padding: 0.9rem;
+    margin: 0;
+    font-size: 0.7rem;
+}
+.productCard .productName{
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 8px;
+}
+.productName h3{
+    font-size: 1em;
+    margin: 0;
+    padding: 0.3rem;
+}
+.toCart{
+    background-color: rgba(0, 0, 0, 0.301);
+    display: none;
+    height: 100%;
+    color: white;
+}
+.toCart h3{
+    position: relative;
+    top: 30%;
+}
+.seeMore{
+    background-color: rgb(201, 199, 199);
+    cursor:pointer;
+}
+.seeMore:hover{
+    background-color: rgb(134, 134, 134);
+    color: black;
+}
+.productCategories{
+    padding: 20px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+}
+
+
+/* Testimonial Section */
+.testimonialSection{
+    margin-top: 50px;
+    flex-direction: column;
+}
+.testimonialSection h1{
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+.testimonialSection .row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    background-color: #d3d3d3;
+    margin-left: 0;
+    margin-right: 0;
+}
+.reviewCard{
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+}
+.reviewCard img{
+    height: 15vh;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.reviewCard p{
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* About Us Section */
+.aboutUsSection{
+    width: 100%;
+}
+.aboutUsSection div{
+    width: 90%;
+}
+.aboutUsSection p{
+    font-size: 1em;
+}
+
+/* Contact Section */
+.contactSection{
+    padding: 5%;
+}
+.contactSection .container h2{
+    font-size: 1.5em;
+}
+.contactInfo{
+    margin-top: 3vh;
+}
+.contactInfo p{
+    color: black;
+    text-align: left;
+    font-size: 1em;
+}
+@media only screen and (max-width: 720px){
+    .contactInfo{
+        flex-direction: column;
+        text-align: center;
+    }
+    .contactInfo p{
+        text-align: center;
+    }
+}
+
+/* Footer Section */
+.footerSection{
+    height: 40vh;
+    background-color: grey;
+    flex-direction: column;
+}
+.footerContents{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.footerContents{
+    font-size: 1em;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(0, 0, 0);
+}
+.footerContents ul{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+.footerContents .uno{
+    width: 50%;
+}
+.uno a, u{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+.footerContents .tres{
+    text-align: right;
+    font-size: 1em;
+    width: 50%;
+}
